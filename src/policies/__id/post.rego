@@ -21,6 +21,7 @@ enabled {
 
 ## Use the ReBAC check_relation built-in to determine 
 ## whether the current user is the manager of the target user
+## 0.0.4
 is_manager_of(current_user_id, target_user_id) {
 	ds.check_relation({
 		"object": {"id": current_user_id},
