@@ -6,8 +6,10 @@ default visible = true
 
 default enabled = false
 
+## 0.0.11
+
 allowed {
-	props = input.user.attributes.properties
+	props = input.user.properties
 	props.department == "Operations"
 }
 
@@ -21,7 +23,6 @@ enabled {
 
 ## Use the ReBAC check_relation built-in to determine 
 ## whether the current user is the manager of the target user
-## 0.0.8
 is_manager_of(current_user_id, target_user_id) {
 	ds.check_relation({
 		"object": {"id": current_user_id},

@@ -7,13 +7,13 @@ default visible = false
 default enabled = false
 
 allowed {
-	props = input.user.attributes.properties
+	props = input.user.properties
 	props.department == "Operations"
 	props.title == "IT Manager"
 }
 
 visible {
-	props = input.user.attributes.properties
+	props = input.user.properties
 	props.department == "Operations"
 }
 
